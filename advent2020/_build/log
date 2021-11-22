@@ -1,0 +1,114 @@
+# dune exec ./advent2020.exe
+# OCAMLPARAM: unset
+# Workspace root: /home/elias/Good_repos/advents/advent2020
+$ /usr/bin/nproc > /tmp/dunee7e3a2.output 2> /dev/null
+# Auto-detected concurrency: 12
+# disable binary cache
+$ /home/elias/.opam/docs/bin/ocamlc.opt -config > /tmp/dunee3db3d.output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dyn
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/home/elias/.opam/docs/lib/toplevel"
+#  ; ocaml_bin = External "/home/elias/.opam/docs/bin"
+#  ; ocaml = Ok External "/home/elias/.opam/docs/bin/ocaml"
+#  ; ocamlc = External "/home/elias/.opam/docs/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/home/elias/.opam/docs/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/home/elias/.opam/docs/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/home/elias/.opam/docs/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/home/elias/.opam/docs/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/home/elias/.opam/docs/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/home/elias/Good_repos/advents/advent2020"
+#        ; "INSIDE_DUNE" :
+#            "/home/elias/Good_repos/advents/advent2020/_build/default"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/home/elias/Good_repos/advents/advent2020/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/home/elias/Good_repos/advents/advent2020/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/home/elias/Good_repos/advents/advent2020/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_path = [ External "/home/elias/.opam/docs/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.10.0"
+#      ; standard_library_default = "/home/elias/.opam/docs/lib/ocaml"
+#      ; standard_library = "/home/elias/.opam/docs/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "gcc"
+#      ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-fPIC" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; ocamlopt_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; bytecomp_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-ldl"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm"; "-ldl" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "linux"
+#      ; asm = [ "as" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-pc-linux-gnu"
+#      ; target = "x86_64-pc-linux-gnu"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X027"
+#      ; cmi_magic_number = "Caml1999I027"
+#      ; cmo_magic_number = "Caml1999O027"
+#      ; cma_magic_number = "Caml1999A027"
+#      ; cmx_magic_number = "Caml1999Y027"
+#      ; cmxa_magic_number = "Caml1999Z027"
+#      ; ast_impl_magic_number = "Caml1999M027"
+#      ; ast_intf_magic_number = "Caml1999N027"
+#      ; cmxs_magic_number = "Caml1999D027"
+#      ; cmt_magic_number = "Caml1999T027"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+# Workspace root: /home/elias/Good_repos/advents/advent2020
+$ (cd _build/default && /home/elias/.opam/docs/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I .advent2020.eobjs/byte -I /home/elias/.opam/docs/lib/base -I /home/elias/.opam/docs/lib/base/base_internalhash_types -I /home/elias/.opam/docs/lib/base/caml -I /home/elias/.opam/docs/lib/base/md5 -I /home/elias/.opam/docs/lib/base/shadow_stdlib -I /home/elias/.opam/docs/lib/base_bigstring -I /home/elias/.opam/docs/lib/base_quickcheck -I /home/elias/.opam/docs/lib/batteries -I /home/elias/.opam/docs/lib/bin_prot -I /home/elias/.opam/docs/lib/bin_prot/shape -I /home/elias/.opam/docs/lib/bytes -I /home/elias/.opam/docs/lib/core -I /home/elias/.opam/docs/lib/core/error_checking_mutex -I /home/elias/.opam/docs/lib/core_kernel -I /home/elias/.opam/docs/lib/core_kernel/base_for_tests -I /home/elias/.opam/docs/lib/core_kernel/caml_unix -I /home/elias/.opam/docs/lib/core_kernel/flags -I /home/elias/.opam/docs/lib/core_kernel/version_util -I /home/elias/.opam/docs/lib/fieldslib -I /home/elias/.opam/docs/lib/jane-street-headers -I /home/elias/.opam/docs/lib/num -I /home/elias/.opam/docs/lib/ocaml/threads -I /home/elias/.opam/docs/lib/parsexp -I /home/elias/.opam/docs/lib/ppx_assert/runtime-lib -I /home/elias/.opam/docs/lib/ppx_bench/runtime-lib -I /home/elias/.opam/docs/lib/ppx_compare/runtime-lib -I /home/elias/.opam/docs/lib/ppx_enumerate/runtime-lib -I /home/elias/.opam/docs/lib/ppx_expect/collector -I /home/elias/.opam/docs/lib/ppx_expect/common -I /home/elias/.opam/docs/lib/ppx_expect/config -I /home/elias/.opam/docs/lib/ppx_expect/config_types -I /home/elias/.opam/docs/lib/ppx_hash/runtime-lib -I /home/elias/.opam/docs/lib/ppx_here/runtime-lib -I /home/elias/.opam/docs/lib/ppx_inline_test/config -I /home/elias/.opam/docs/lib/ppx_inline_test/runtime-lib -I /home/elias/.opam/docs/lib/ppx_module_timer/runtime -I /home/elias/.opam/docs/lib/ppx_sexp_conv/runtime-lib -I /home/elias/.opam/docs/lib/sexplib -I /home/elias/.opam/docs/lib/sexplib/unix -I /home/elias/.opam/docs/lib/sexplib0 -I /home/elias/.opam/docs/lib/spawn -I /home/elias/.opam/docs/lib/splittable_random -I /home/elias/.opam/docs/lib/stdio -I /home/elias/.opam/docs/lib/time_now -I /home/elias/.opam/docs/lib/timezone -I /home/elias/.opam/docs/lib/typerep -I /home/elias/.opam/docs/lib/variantslib -no-alias-deps -opaque -o .advent2020.eobjs/byte/dune__exe__Advent2020.cmo -c -impl advent2020.ml)
+$ (cd _build/default && /home/elias/.opam/docs/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I .advent2020.eobjs/byte -I .advent2020.eobjs/native -I /home/elias/.opam/docs/lib/base -I /home/elias/.opam/docs/lib/base/base_internalhash_types -I /home/elias/.opam/docs/lib/base/caml -I /home/elias/.opam/docs/lib/base/md5 -I /home/elias/.opam/docs/lib/base/shadow_stdlib -I /home/elias/.opam/docs/lib/base_bigstring -I /home/elias/.opam/docs/lib/base_quickcheck -I /home/elias/.opam/docs/lib/batteries -I /home/elias/.opam/docs/lib/bin_prot -I /home/elias/.opam/docs/lib/bin_prot/shape -I /home/elias/.opam/docs/lib/bytes -I /home/elias/.opam/docs/lib/core -I /home/elias/.opam/docs/lib/core/error_checking_mutex -I /home/elias/.opam/docs/lib/core_kernel -I /home/elias/.opam/docs/lib/core_kernel/base_for_tests -I /home/elias/.opam/docs/lib/core_kernel/caml_unix -I /home/elias/.opam/docs/lib/core_kernel/flags -I /home/elias/.opam/docs/lib/core_kernel/version_util -I /home/elias/.opam/docs/lib/fieldslib -I /home/elias/.opam/docs/lib/jane-street-headers -I /home/elias/.opam/docs/lib/num -I /home/elias/.opam/docs/lib/ocaml/threads -I /home/elias/.opam/docs/lib/parsexp -I /home/elias/.opam/docs/lib/ppx_assert/runtime-lib -I /home/elias/.opam/docs/lib/ppx_bench/runtime-lib -I /home/elias/.opam/docs/lib/ppx_compare/runtime-lib -I /home/elias/.opam/docs/lib/ppx_enumerate/runtime-lib -I /home/elias/.opam/docs/lib/ppx_expect/collector -I /home/elias/.opam/docs/lib/ppx_expect/common -I /home/elias/.opam/docs/lib/ppx_expect/config -I /home/elias/.opam/docs/lib/ppx_expect/config_types -I /home/elias/.opam/docs/lib/ppx_hash/runtime-lib -I /home/elias/.opam/docs/lib/ppx_here/runtime-lib -I /home/elias/.opam/docs/lib/ppx_inline_test/config -I /home/elias/.opam/docs/lib/ppx_inline_test/runtime-lib -I /home/elias/.opam/docs/lib/ppx_module_timer/runtime -I /home/elias/.opam/docs/lib/ppx_sexp_conv/runtime-lib -I /home/elias/.opam/docs/lib/sexplib -I /home/elias/.opam/docs/lib/sexplib/unix -I /home/elias/.opam/docs/lib/sexplib0 -I /home/elias/.opam/docs/lib/spawn -I /home/elias/.opam/docs/lib/splittable_random -I /home/elias/.opam/docs/lib/stdio -I /home/elias/.opam/docs/lib/time_now -I /home/elias/.opam/docs/lib/timezone -I /home/elias/.opam/docs/lib/typerep -I /home/elias/.opam/docs/lib/variantslib -intf-suffix .ml -no-alias-deps -opaque -o .advent2020.eobjs/native/dune__exe__Advent2020.cmx -c -impl advent2020.ml)
+$ (cd _build/default && /home/elias/.opam/docs/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o advent2020.exe /home/elias/.opam/docs/lib/base/base_internalhash_types/base_internalhash_types.cmxa -I /home/elias/.opam/docs/lib/base/base_internalhash_types /home/elias/.opam/docs/lib/base/caml/caml.cmxa /home/elias/.opam/docs/lib/sexplib0/sexplib0.cmxa /home/elias/.opam/docs/lib/base/shadow_stdlib/shadow_stdlib.cmxa /home/elias/.opam/docs/lib/base/base.cmxa -I /home/elias/.opam/docs/lib/base /home/elias/.opam/docs/lib/ppx_sexp_conv/runtime-lib/ppx_sexp_conv_lib.cmxa /home/elias/.opam/docs/lib/ppx_here/runtime-lib/ppx_here_lib.cmxa /home/elias/.opam/docs/lib/ppx_inline_test/config/inline_test_config.cmxa /home/elias/.opam/docs/lib/jane-street-headers/jane_street_headers.cmxa /home/elias/.opam/docs/lib/ppx_compare/runtime-lib/ppx_compare_lib.cmxa /home/elias/.opam/docs/lib/ppx_enumerate/runtime-lib/ppx_enumerate_lib.cmxa /home/elias/.opam/docs/lib/ppx_hash/runtime-lib/ppx_hash_lib.cmxa /home/elias/.opam/docs/lib/time_now/time_now.cmxa -I /home/elias/.opam/docs/lib/time_now /home/elias/.opam/docs/lib/ppx_inline_test/runtime-lib/ppx_inline_test_lib.cmxa /home/elias/.opam/docs/lib/ppx_bench/runtime-lib/ppx_bench_lib.cmxa /home/elias/.opam/docs/lib/ppx_assert/runtime-lib/ppx_assert_lib.cmxa /home/elias/.opam/docs/lib/splittable_random/splittable_random.cmxa /home/elias/.opam/docs/lib/fieldslib/fieldslib.cmxa /home/elias/.opam/docs/lib/base_quickcheck/base_quickcheck.cmxa /home/elias/.opam/docs/lib/base/md5/md5_lib.cmxa /home/elias/.opam/docs/lib/ocaml/unix.cmxa -I /home/elias/.opam/docs/lib/ocaml /home/elias/.opam/docs/lib/ocaml/bigarray.cmxa -I /home/elias/.opam/docs/lib/ocaml /home/elias/.opam/docs/lib/variantslib/variantslib.cmxa /home/elias/.opam/docs/lib/bin_prot/shape/bin_shape_lib.cmxa /home/elias/.opam/docs/lib/bin_prot/bin_prot.cmxa -I /home/elias/.opam/docs/lib/bin_prot /home/elias/.opam/docs/lib/stdio/stdio.cmxa /home/elias/.opam/docs/lib/ppx_module_timer/runtime/ppx_module_timer_runtime.cmxa /home/elias/.opam/docs/lib/typerep/typerep_lib.cmxa /home/elias/.opam/docs/lib/ppx_expect/common/expect_test_common.cmxa /home/elias/.opam/docs/lib/ppx_expect/config_types/expect_test_config_types.cmxa /home/elias/.opam/docs/lib/ppx_expect/collector/expect_test_collector.cmxa -I /home/elias/.opam/docs/lib/ppx_expect/collector /home/elias/.opam/docs/lib/ppx_expect/config/expect_test_config.cmxa /home/elias/.opam/docs/lib/base_bigstring/base_bigstring.cmxa -I /home/elias/.opam/docs/lib/base_bigstring /home/elias/.opam/docs/lib/core_kernel/base_for_tests/base_for_tests.cmxa /home/elias/.opam/docs/lib/parsexp/parsexp.cmxa /home/elias/.opam/docs/lib/sexplib/sexplib.cmxa /home/elias/.opam/docs/lib/core_kernel/core_kernel.cmxa -I /home/elias/.opam/docs/lib/core_kernel /home/elias/.opam/docs/lib/ocaml/threads/threads.cmxa -I /home/elias/.opam/docs/lib/ocaml /home/elias/.opam/docs/lib/core/error_checking_mutex/error_checking_mutex.cmxa -I /home/elias/.opam/docs/lib/core/error_checking_mutex /home/elias/.opam/docs/lib/core_kernel/caml_unix/caml_unix.cmxa /home/elias/.opam/docs/lib/core_kernel/flags/flags.cmxa /home/elias/.opam/docs/lib/core_kernel/version_util/version_util.cmxa -I /home/elias/.opam/docs/lib/core_kernel/version_util /home/elias/.opam/docs/lib/sexplib/unix/sexplib_unix.cmxa /home/elias/.opam/docs/lib/spawn/spawn.cmxa -I /home/elias/.opam/docs/lib/spawn /home/elias/.opam/docs/lib/timezone/timezone.cmxa /home/elias/.opam/docs/lib/core/core.cmxa -I /home/elias/.opam/docs/lib/core /home/elias/.opam/docs/lib/ocaml/nums.cmxa -I /home/elias/.opam/docs/lib/ocaml /home/elias/.opam/docs/lib/ocaml/str.cmxa -I /home/elias/.opam/docs/lib/ocaml /home/elias/.opam/docs/lib/batteries/batteries.cmxa /home/elias/.opam/docs/lib/batteries/batteriesThread.cmxa .advent2020.eobjs/native/dune__exe__Advent2020.cmx)
