@@ -1,6 +1,6 @@
 (ns main
   (:require [clojure.java.io :as io]
-             [clojure.string :as string]))
+            [clojure.string :as string]))
 
 (def data_file "/home/elias/Good_repos/advents/2020/data_inputs/01-2020.txt")
 
@@ -11,23 +11,32 @@
 
 (comment
  (println (dec1 "/home/elias2049/Good_Repo/advents_of_code/2020/data_inputs/01-2020.txt")))
+ 
 
 ;;  (println (slurp "/home/elias/Good_repos/advents/2020/data_inputs/01-2020.txt"))
 
 
-(defn the-elf-accountant
+(defn the-elf-accountant-1
   [input-file]
   (with-open [input-txt (io/reader input-file)]
-    (loop [numbers (map #(Integer/parseInt %) (into [] (line-seq input-txt)))
-          size (count numbers)
-          i 0
-          res []]
-      if (= i (- size 1))
-      (loop [numbers2 (map #(Integer/parseInt %) (into [] (line-seq input-txt)))
-             i2 0]
-        if (= i (- size 1))
-        ))))
+    (let [numbers (map #(Integer/parseInt %) (into [] (line-seq input-txt)))
+          size (count numbers)]
+     (loop [i 0
+            res []]
+       (if (= i size)
+         (* (first res) (last res))
+         (recur (inc i)
+                (loop [j 0
+                       res res]
+                  (if (or (= j size) (= (count res) 2))
+                    res
+                    (recur (inc j)
+                           (if (= 2020 (+ (nth numbers i) (nth numbers j)))
+                             (conj res (nth numbers i) (nth numbers j))
+                             res))))))))))
 
-(println (type (nth (the-elf-accountant data_file ) 0)))
+(comment
+ (println (type (nth (the-elf-accountant-1 data_file) 0))))
+ 
 
-(println (the-elf-accountant data_file))
+(the-elf-accountant-1 data_file)
