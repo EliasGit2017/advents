@@ -2,7 +2,7 @@
 ; TIPS: The keyboard shortcut `ctrl+alt+c o` shows and focuses this window
 ;   when connected to a REPL session.
 ; Please see https://calva.io/output/ for more info.
-; Happy coding! ♥️i
+; Happy coding! ♥️
 
 ; Jacking in...
 ; Starting Jack-in Terminal: clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"0.8.3"},cider/cider-nrepl {:mvn/version,"0.26.0"}}}'  -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware]"
@@ -22,28 +22,34 @@ nil
 clj꞉main꞉> 
 #'main/data_file
 clj꞉main꞉> 
-#'main/the-elf-accountant
-clj꞉main꞉> (the-elf-accountant data_file)
-[]
-nil
+#'main/dec1
 clj꞉main꞉> 
-#'main/the-elf-accountant
-clj꞉main꞉> 
-[]
-clj꞉main꞉> 
-#'main/the-elf-accountant
-clj꞉main꞉> 
-[81 92]
-clj꞉main꞉> 
-#'main/the-elf-accountant
-clj꞉main꞉> 
-[1316 704]
-clj꞉main꞉> 
-(+ 1316 704)
-2020
-clj꞉main꞉> 
-#'main/the-elf-accountant
+#'main/the-elf-accountant-1
 clj꞉main꞉> 
 926464
+clj꞉main꞉> (def v [1 2 3 4 5 6])
+#'main/v
+clj꞉main꞉> 
+(map #(map partial * %) v)
+; Error printing return value (IllegalArgumentException) at clojure.lang.RT/seqFrom (RT.java:557).
+; Don't know how to create ISeq from: clojure.core$_STAR_
+clj꞉main꞉> 
+(map #(* %) v)
+(1 2 3 4 5 6)
+clj꞉main꞉> 
+(reduce #(* %) v)
+; Execution error (ArityException) at main/eval7262 (REPL:40).
+; Wrong number of args (2) passed to: main/eval7262/fn--7263
+clj꞉main꞉> 
+(reduce * v)
+720
+clj꞉main꞉> 
+#'main/the-elf-accountant-2
+clj꞉main꞉> 
+1
+clj꞉main꞉> 
+#'main/the-elf-accountant-2
+clj꞉main꞉> 
+65656536
 clj꞉main꞉> 
 ; nREPL Connection was closed
