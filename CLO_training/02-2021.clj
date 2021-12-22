@@ -4,20 +4,43 @@
 
 (def data_file "/home/elias/Good_repos/advents/2021/data_inputs/02-2021.txt")
 
-(defn submarine-control
- [input-file]
+(defn submarine-control-1
+  [input-file]
   (loop [data (->>
-          (io/reader input-file)
-          (line-seq))
+               (io/reader input-file)
+               (line-seq))
+         size (count data)
          x 0
          y 0
-         size (count data)
          i 0]
     (if (= i size)
       (* x y)
-      (cond
-        (= "forward" (first (str/split (nth data i) #" "))) (recur data (+ x (Integer/parseInt (second (str/split (nth data i) #" ")))) y size (inc i))
-        (= "up" (first (str/split (nth data i) #" "))) (recur data x (- y (Integer/parseInt (second (str/split (nth data i) #" ")))) size (inc i))
-        (= "down" (first (str/split (nth data i) #" "))) (recur data x (+ y (Integer/parseInt (second (str/split (nth data i) #" ")))) size (inc i))))))
+      (let [instruction (first (str/split (nth data i) #" "))
+            level (Integer/parseInt (second (str/split (nth data i) #" ")))]
+        (cond
+          (= "forward" instruction) (recur data size (+ x level) y (inc i))
+          (= "up" instruction) (recur data size x (- y level) (inc i))
+          (= "down" instruction) (recur data size x (+ y level) (inc i)))))))
+
+(submarine-control-1 data_file)
+
+(defn submarine-control-2
+  [input-file]
+  (loop [data (->>
+               (io/reader input-file)
+               (line-seq))
+         size (count data)
+         x 0
+         y 0
+         aim 0
+         i 0]
+    (if (= i size)
+      (* x y)
+      (let [instruction (first (str/split (nth data i) #" "))
+            level (Integer/parseInt (second (str/split (nth data i) #" ")))]
+        (cond
+          (= "forward" instruction) (recur data size (+ x level) (+ y (* aim level)) aim (inc i))
+          (= "up" instruction) (recur data size x y (- aim level) (inc i))
+          (= "down" instruction) (recur data size x y (+ aim level) (inc i)))))))
 
 (submarine-control data_file)
