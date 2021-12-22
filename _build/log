@@ -1,10 +1,10 @@
-# dune build
+# dune exec ./advent2020.exe
 # OCAMLPARAM: unset
 # Workspace root: /home/elias/Good_repos/advents
-$ /usr/bin/nproc > /tmp/dunee2986e.output 2> /dev/null
+$ /usr/bin/nproc > /tmp/duneeb7dae.output 2> /dev/null
 # Auto-detected concurrency: 12
 # disable binary cache
-$ /home/elias/.opam/docs/bin/ocamlc.opt -config > /tmp/dune2e48f1.output
+$ /home/elias/.opam/docs/bin/ocamlc.opt -config > /tmp/dunef760c7.output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"

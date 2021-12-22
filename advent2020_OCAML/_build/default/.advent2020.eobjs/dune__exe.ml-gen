@@ -1,0 +1,6 @@
+(** @canonical Dune__exe.Advent01_2021 *)
+module Advent01_2021 = Dune__exe__Advent01_2021
+
+
+(** @canonical Dune__exe.Advent2020 *)
+module Advent2020 = Dune__exe__Advent2020
