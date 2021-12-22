@@ -4,3 +4,5 @@
 ./CLO_training/.lsp
 .lsp
 .nrepl-port
+./advent2020_OCAML/_build
+./_build
