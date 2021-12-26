@@ -43,4 +43,4 @@
           (= "up" instruction) (recur data size x y (- aim level) (inc i))
           (= "down" instruction) (recur data size x y (+ aim level) (inc i)))))))
 
-(submarine-control data_file)
+(submarine-control-2 data_file)

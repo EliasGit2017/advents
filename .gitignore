@@ -1,8 +1,8 @@
-./CLO_training/.calva
-./CLO_training/.clj-kondo
-./CLO_training/.cpcache
-./CLO_training/.lsp
+./CLO_training/.calva/
+./CLO_training/.clj-kondo/
+./CLO_training/.cpcache/
+./CLO_training/.lsp/
 .lsp
 .nrepl-port
-./advent2020_OCAML/_build
-./_build
+./advent2020_OCAML/_build/
+./_build/
